@@ -1,26 +1,39 @@
 .calculator {
     max-width: 300px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    background-color: #333;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .display {
-    background-color: #f0f0f0;
+    background-color: #55535359;
     padding: 10px;
     font-size: 2rem;
     text-align: right;
-    border: 1px solid #ddd;
+    border: 1px solid #696565bb;
     border-radius: 5px;
     margin-bottom: 10px;
+    color: white;
+  }
+  
+  .expression {
+    color: #ff9900;
+    text-align: right;
   }
   
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
     gap: 10px;
+    grid-template-areas:
+      "clear clear equals equals"
+      "seven eight nine divide"
+      "four five six multiply"
+      "one two three subtract"
+      "zero decimal add add";
   }
   
   button {
@@ -36,5 +49,109 @@
     &:hover {
       background-color: #0056b3;
     }
+  
+  }
+
+  #clear {
+    grid-area: clear;
+    background-color: #dc3545;
+    &:hover {
+      background-color: #bd2130;
+    }
   }
   
+  #equals {
+    grid-area: equals;
+    background-color: #28a745;
+    &:hover {
+      background-color: #1e7e34;
+    }
+  }
+  
+  #zero,
+  #one,
+  #two,
+  #three,
+  #four,
+  #five,
+  #six,
+  #seven,
+  #eight,
+  #nine {
+    background-color: #7a7a7a; // gray metallic
+    &:hover {
+      background-color: #5a5a5a;
+    }
+  }
+
+  #add,
+  #subtract,
+  #multiply,
+  #divide,
+  #decimal {
+    background-color: #494949; // gray metallic
+    &:hover {
+      background-color: #373737;
+    }
+  }
+
+  
+  #zero {
+    grid-area: zero;
+  }
+  
+  #one {
+    grid-area: one;
+  }
+  
+  #two {
+    grid-area: two;
+  }
+  
+  #three {
+    grid-area: three;
+  }
+  
+  #four {
+    grid-area: four;
+  }
+  
+  #five {
+    grid-area: five;
+  }
+  
+  #six {
+    grid-area: six;
+  }
+  
+  #seven {
+    grid-area: seven;
+  }
+  
+  #eight {
+    grid-area: eight;
+  }
+  
+  #nine {
+    grid-area: nine;
+  }
+  
+  #add {
+    grid-area: add;
+  }
+  
+  #subtract {
+    grid-area: subtract;
+  }
+  
+  #multiply {
+    grid-area: multiply;
+  }
+  
+  #divide {
+    grid-area: divide;
+  }
+  
+  #decimal {
+    grid-area: decimal;
+  }

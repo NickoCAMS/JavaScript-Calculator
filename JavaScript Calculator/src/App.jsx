@@ -182,7 +182,7 @@ function App() {
       <div className="display" id='display'>{state.display}</div>
       <div className="buttons">
         <button id="clear" onClick={handleClear}>AC</button>
-        <button id="decimal" onClick={handleDecimal}>.</button>
+        
         {numberButtons.map(({ id, value }) => (
           <button 
             key={id} 
@@ -198,6 +198,7 @@ function App() {
             {value}
           </button>
         ))}
+        <button id="decimal" onClick={handleDecimal}>.</button>
       </div>
     </div>
   );
